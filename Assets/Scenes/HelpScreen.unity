@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: cf81667e25b825341816b34fc769a16e,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -399,6 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -429,6 +433,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 612964946}
+        m_TargetAssemblyTypeName: 
         m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
@@ -454,6 +459,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -528,6 +534,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -548,13 +555,13 @@ MonoBehaviour:
   m_Text: "The main goal of the game is to survive as many rounds as you can without
     getting married\r\n\r\nYour life is shown on the bar at the top right corner\r\n\r\nWith
     the left joystick you can move left, right and jump\r\n\r\nWith the right button
-    you can attack from distance with heart kisses \r\n\r\nTry to drink the cocktails\r\n\r\nCosmopolitan
-    heals you by 5 points\r,\nDaiquiri by 10\r, Margarita by 15, \r\r\nMartini by
-    20\r\n\r\nThe opponents attack you either from close distance, by touching you
-    or from afar, throwing flowers at you\r\n\r\nTry to avoid flowers\r\n\r\nPink
-    flower damages you by 25 points\r, \nPurple flower by 30\r, Red flower by 35\r,
-    Yellow by 40\r\n\nOver time opponents become more resilient and attack faster,
-    making your survival more difficult\r"
+    you can attack from distance with heart kisses\n\r\nTry to drink the cocktails\r\n\r\nCosmopolitan
+    heals you by 5 points\r, Daiquiri by 10\r, Margarita by 15,\nMartini by 20\r\n\r\nThe
+    opponents attack you either from close distance, by touching you or from afar,
+    throwing flowers at you\r\n\r\nTry to avoid flowers\r\n\r\nPink flower damages
+    you by 25 points\r, Purple flower by 30\r, Red flower by 35\r, Yellow flower
+    by 40\r\n\nOver time, opponents become more resilient and attack faster, making
+    your survival more difficult\r"
 --- !u!222 &1030142140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -621,6 +628,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1243859896
 Canvas:
   m_ObjectHideFlags: 0
@@ -695,6 +703,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -862,6 +871,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
